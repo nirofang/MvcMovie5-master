@@ -31,6 +31,7 @@
     </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -196,6 +197,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-MvcMovie-.mdf" />
+    <Content Include="App_Data\aspnet-MvcMovie-_log.ldf">
+      <DependentUpon>aspnet-MvcMovie-.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\MoviesRTM2.mdf" />
+    <Content Include="App_Data\MoviesRTM2_log.ldf">
+      <DependentUpon>MoviesRTM2.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\TextFile1.txt" />
@@ -252,9 +261,7 @@
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
